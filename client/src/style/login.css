@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#FFFEFC;
+    height: 80vh;
+    width: 100%;
+}
+
+.e-voting-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.e-voting--logo{
+    height: 333px;
+    width: 654px;
+    gap: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.e-voting--logo div img{
+    height: 115px;
+    width: 84px;
+    object-fit: contain;
+}
+
+.e-voting--item{
+    list-style: none;
+    display: flex;
+}
+
+.e-voting--item li{
+    font-weight: 700;
+    color:#276221;
+    font-size: 12px;
+    line-height: 13.79px;
+    padding-right: 0.4rem;
+    
+}
+
+.login--title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27.58px;
+    text-align: left;
+    color:#276221;
+    margin-bottom: 3rem;
+}
+
+.login--form{
+    height: 366px;
+    height: 276px;
+    
+}
+
+.group--control{
+    display: flex;
+    align-items: center;
+}
+
+.group--control input{
+    height: 39px;
+    width: 366px;
+    gap: 16px;
+    border: none;
+    border-bottom: 1px solid #0C090866;
+    outline: none;
+    padding: 1rem 0;
+}
+
+.group--control .eye-slash{
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    margin-left: -2rem;
+    
+}
+
+.group--control input::placeholder{
+    color:#0C090866 ;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22.42px;
+}
+
+.group--control--remeber{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.group--control--remeber input{
+    height: 16px;
+    width: 16px;
+    margin-right:1rem;
+}
+
+.group--control--remeber input p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15.69px;
+}
+
+.group--control--remeber input:focus{
+    background-color:#276221 ;
+}
+
+
+.e-voting--btn  a button{
+    text-decoration: none;
+    background-color:#276221;
+    height: 42px;
+    width: 366px;
+    padding: 8px 24px;
+    gap: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 20.48px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.image-bottom--right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+   
+ }

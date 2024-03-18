@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexStartCenter{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.flexStart{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flexEnd{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexAlign{
+    display: flex;
+    align-items: center;
+}
+
+.flexBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.flexAround{
+    display: flex;
+    justify-content: space-around;
+}
+
+body{
+    width: 1440px;
+    height: 100vh;
+}
+
+.dashboard-header{
+    height: 124px;
+    background-color: #276221 ;
+    padding-left: 2rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.dashboard-header--menu{
+    margin-right: 2rem;
+}
+
+.dashboard-header--menu img{
+    margin-right: 2rem;
+}
+
+.dashboard-header--title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22.98px;
+    color: #FFFEFC;
+    text-transform: capitalize;
+}
+
+.dashboard-header--maskface{
+    background-color:#FFFEFC;
+    width: 72px;
+    height: 16px;
+    border-radius: 4px;
+    text-align: center;
+    
+}
+
+.dashboard-header--maskface select option{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 9.19px;
+    text-align: center;
+}
+
+.dashboard-main{
+    flex-direction: column;
+}
+
+.dashboard-rectangle--card{
+    height: 82px;
+    width: 362px;
+    border-radius: 4px;
+    background-color: #276221;
+   color: #FFFEFC;
+   padding: 0 1rem;
+   margin-top: 8rem;
+   margin-left: 1rem;
+
+}
+
+.dashboard-rectangle--card div h2{
+    padding-top: 1.5rem;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22.98px;
+}
+.dashboard-rectangle--card p{
+    float: right;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22.98px;
+}
+
+.dashboard-activity{
+    border: 1px solid #276221;
+    height: 400px;
+    width: 735px;
+    margin-top: 1rem;
+    border-radius: 4px;
+    margin-left: 1rem;
+    padding:2rem;
+}
+
+.dashboard-activity h1{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24.13px;
+    margin-bottom: 2rem;
+}
+
+.dashboard-activity p{
+    padding: 0.5rem 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11.21px;
+}
+
+.dashboard-sidebar{
+   position: fixed;
+   background-color:#FFFEFC;
+   color: #000;
+   left: -313px;
+   top: 0;
+   width: 313px;
+   height: 200vh;
+   z-index: 999;
+   overflow-x: hidden;
+   transition: 0.3s;
+}
+
+.closesidebar{
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+    height: 20px;
+    width: 20px;
+    font-size: 40px;
+    border: 1px solid #276221;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dashboard-sidebar--avatar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    padding-left: 1rem;
+    height: 124px;
+}
+
+.dashboard-sidebar--avatar img{
+    height: 51px;
+    width: 51px;
+    border: 0.4px;
+    object-fit: contain;
+}
+
+.dashboard-sidebar--avatar h2{
+    font-size: 10px;
+    line-height: 11.49px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.dashboard-sidebar--avatar p{
+    font-size: 8px;
+    line-height: 10.24px;
+    text-align: center;
+    font-weight: 400;
+}
+
+hr{
+    border: 1px solid #276221;
+}
+
+.dashboard-sidebar--row{
+    color: #000;
+    margin: 3rem 1rem;
+}
+
+.dashboard-sidebar--row img{
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    padding-right:10px ;
+    padding-left: 10px;
+}
+
+.active {
+    width: 225px;
+    height: 39px;
+    border-bottom-right-radius: 32px;
+    background-color: #276221;
+    color: #FFFEFC;
+}
+
+.dashboard-sidebar--bottom img{
+    object-fit: contain;
+    text-align: center;
+}
+
+/* 
+.image-bottom--right {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200vh;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+} */
+
+@media screen and (max-width: 550px) {
+   body{
+    width: 100%;
+    height: 100%;
+   }
+   
+    .dashboard-sidebar{
+        width: 313px;
+    }
+    .dashboard-rectangle{
+        display: block;
+        margin-top: 9rem;
+    }
+
+    .dashboard-rectangle--card{
+        width: 250px;
+        margin-top: 2rem;
+       
+    }
+
+    .dashboard-activity{
+        width: 220px;
+        height: 100%;
+        margin-bottom: 4rem;
+    }
+    
+}
