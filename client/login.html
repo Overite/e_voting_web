@@ -18,22 +18,30 @@
                 </ul>
             </div>
             <section class="login--form" aria-disabled="false">
-                <form action="">
+                <form id="loginForm">
                     <h1 class="login--title">Login</h1>
                     <div>
                         <div class="group--control">
-                            <input type="text" name="" placeholder="Admin" id="">
+                            <div class="error-group--control">
+                                <input type="text" name="admin" placeholder="Admin" id="admin">
+                                <div  id="errorInput"></div>
+                            </div>
                         </div>
                         <div class="group--control">
-                            <input type="password" name="" placeholder="password" id="">
-                            <img class="eye-slash" src="./src/assets/icons/eye-slash.svg" alt="eye slash">
+                            <div class="error-group--control">
+                                <input type="password" name="password" placeholder="password" id="password">
+                                <div  id="errorInput"></div>
+                            </div>
+                            <img class="eye-slash" id="togglePassword" src="./src/assets/icons/eye-slash.svg" alt="eye slash">
                         </div>
                         <div class="group--control--remeber">
                             <input type="checkbox" name="" placeholder="password" id="">
                             <p class="">Remember me</p>
                         </div>
                         <div class="e-voting--btn">
-                            <a href="./dashboard.html"> <button> Login</button> </a>
+                           
+                                <a href="./dashboard.html"> <button type="submit"> Login</button> </a>
+                    
                     </div>
                     </div>
                 </form>
@@ -45,4 +53,5 @@
         <img src="./src/assets/images/FUT.png" alt="">
     </section>
 </body>
+<script src="./src/javascript/main.js"></script>
 </html>

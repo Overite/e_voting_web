@@ -7,6 +7,7 @@
 
 body{
     background-color:#FFFEFC;
+    width: 100%;
 }
 
 .e-voting-container{
@@ -61,14 +62,17 @@ body{
     border-radius: 8px;
 }
 
-/* 
-.image-bottom--right {
+
+.image-bottom--right{
     position: absolute;
     right: 0;
     bottom: 0;
     padding-right: 4rem;
     padding-bottom: 1rem;
-    height: 60px;
     display: flex;
     align-items: center;
-} */
+}
+
+.image-bottom--right img{
+    object-fit: contain;
+}

@@ -52,8 +52,7 @@
 }
 
 body{
-    width: 1440px;
-    height: 100vh;
+    width: 100%;
 }
 
 .dashboard-header{
@@ -100,13 +99,14 @@ body{
 
 .dashboard-main{
     flex-direction: column;
+   
 }
 
 .dashboard-rectangle--card{
-    height: 82px;
-    width: 362px;
-    border-radius: 4px;
-    background-color: #276221;
+   height: 82px;
+   width: 362px;
+   border-radius: 4px;
+   background-color: #276221;
    color: #FFFEFC;
    padding: 0 1rem;
    margin-top: 8rem;
@@ -225,6 +225,10 @@ hr{
     padding-left: 10px;
 }
 
+.dashboard-sidebar--row a{
+    text-decoration: none;
+}
+
 .active {
     width: 225px;
     height: 39px;
@@ -238,17 +242,82 @@ hr{
     text-align: center;
 }
 
-/* 
-.image-bottom--right {
+.image-bottom--right{
     position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 200vh;
-    padding-right: 4rem;
+    right: 0;
+    bottom: -25rem;
+    padding-right: 2rem;
     padding-bottom: 1rem;
-} */
+}
 
-@media screen and (max-width: 550px) {
+.image-bottom--right img{
+    object-fit: contain;
+}
+
+
+
+/* For tabet phone */
+@media only screen and (max-width:768px){
+    body{
+        width: 100%;
+        height: 100%;
+       }
+       
+        .dashboard-sidebar{
+            width: 313px;
+        }
+        .dashboard-rectangle{
+            /* display: block; */
+            margin-top: 9rem;
+        }
+    
+        .dashboard-rectangle--card{
+            width: 250px;
+            margin-top: 2rem;
+           
+        }
+    
+        .dashboard-activity{
+            width: 510px;
+            height: 100%;
+            margin-bottom: 4rem;
+        }
+        
+    
+    
+}
+
+ /* For laptop */
+@media only screen and (max-width: 1024px) {
+    
+    body{
+        width: 100%;
+    }
+     /* .dashboard-sidebar{
+         width: 313px;
+     } */
+     .dashboard-rectangle{
+         /* display: block; */
+         margin-top: 9rem;
+     }
+ 
+     .dashboard-rectangle--card{
+         width: 300px;
+         margin-top: 2rem;
+        
+     }
+ 
+     .dashboard-activity{
+         width: 610px;
+         /* height: 100%;
+         margin-bottom: 4rem; */
+     }
+     
+ }
+
+
+ /* For mobile */
+@media only screen and (max-width: 550px) {
    body{
     width: 100%;
     height: 100%;
@@ -265,13 +334,24 @@ hr{
     .dashboard-rectangle--card{
         width: 250px;
         margin-top: 2rem;
-       
+        text-align: center;
+    }
+
+    .dashboard-rectangle--card p{
+        text-align: center;
+        float: none;
     }
 
     .dashboard-activity{
         width: 220px;
         height: 100%;
+        text-align: left;
         margin-bottom: 4rem;
+        
+    }
+
+    .dashboard-activity h1{
+        text-align: center;
     }
     
 }

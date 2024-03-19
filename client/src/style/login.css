@@ -117,7 +117,14 @@ body{
     background-color:#276221 ;
 }
 
+.errorInput{
+    color: red;
+}
 
+.error-group--control{
+   display: flex;
+   flex-direction: column;
+}
 .e-voting--btn  a button{
     text-decoration: none;
     background-color:#276221;

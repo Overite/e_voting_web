@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:#FFFEFC;
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.facedetection-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+}
+.facedetection--logo{
+    height: 333px;
+    width: 654px;
+    gap: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.facedetection div img{
+    height: 115px;
+    width: 84px;
+    object-fit: contain;
+}
+
+.facedetection--item{
+    list-style: none;
+    display: flex;
+}
+
+.facedetection--item li{
+    font-weight: 700;
+    color:#0C090866;
+    font-size: 12px;
+    line-height: 13.79px;
+    padding-right: 0.4rem;
+}
+
+
+
+.image-bottom--right{
+    position: absolute;
+    right: 0;
+    bottom: -15rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.image-bottom--right img{
+    object-fit: contain;
+}
+
+.face-scan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.face-scan img{
+    height: 270px;
+    width: 358px;
+    object-fit: contain;
+    margin-top: 5rem;
+}
+
+.face-btn{
+    height: 42px;
+    margin-top: 5rem;
+    width: 366px;
+    background: #27622133;
+    border: none;
+    padding: 8px 24px;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.face-btn a{
+    text-decoration: none;
+    color:#FFFEFC;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20.48px;
+}
+
+/* For tabet phone */
+@media only screen and (max-width:768px){
+
+    
+    
+}
+
+ /* For laptop */
+@media only screen and (max-width: 1024px) {
+    
+
+ }
+
+
+ /* For mobile */
+@media only screen and (max-width: 550px) {
+   body{
+    width: 100%;
+    height: 100%;
+   }
+
+   .facedetection-container{
+    justify-content: center;
+    width: 100%;
+}
+.image-bottom--right{
+    display: flex;
+    justify-content: center;
+    right: 0;
+        
+}
+   
+   
+}
