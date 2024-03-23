@@ -55,6 +55,37 @@ body{
     width: 100%;
 }
 
+.register-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-radio{
+    display: flex;
+}
+
+.register-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.register-column div{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.register-column div p{
+   padding-right: 2rem;
+}
+
+.register-column div input{
+    margin-right: 2rem;
+}
 .dashboard-header{
     height: 124px;
     background-color: #276221 ;
@@ -97,60 +128,6 @@ body{
     text-align: center;
 }
 
-.dashboard-main{
-    flex-direction: column;
-   
-}
-
-.dashboard-rectangle--card{
-   height: 82px;
-   width: 362px;
-   border-radius: 4px;
-   background-color: #276221;
-   color: #FFFEFC;
-   padding: 0 1rem;
-   margin-top: 8rem;
-   margin-left: 1rem;
-
-}
-
-.dashboard-rectangle--card div h2{
-    padding-top: 1.5rem;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 22.98px;
-}
-.dashboard-rectangle--card p{
-    float: right;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 22.98px;
-}
-
-.dashboard-activity{
-    border: 1px solid #276221;
-    height: 400px;
-    width: 735px;
-    margin-top: 1rem;
-    border-radius: 4px;
-    margin-left: 1rem;
-    padding:2rem;
-}
-
-.dashboard-activity h1{
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 24.13px;
-    margin-bottom: 2rem;
-}
-
-.dashboard-activity p{
-    padding: 0.5rem 0;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 11.21px;
-}
-
 .dashboard-sidebar{
    position: fixed;
    background-color:#FFFEFC;
@@ -165,9 +142,6 @@ body{
 }
 
 .closesidebar{
-    /* position: absolute;
-    right: 0;
-    top: 0; */
     height: 20px;
     width: 20px;
     font-size: 40px;
@@ -240,20 +214,86 @@ hr{
     text-align: center;
 }
 
+.search{
+    position: absolute;
+    right: 10;
+    height: 20px;
+    width: 20px;
+    padding-left: 1rem;
+}
+
+.register-search{
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    transform: translateX(150%);
+    width: 300px;
+    z-index: 999;
+}
+
+.register-search input{
+    height: 40px;
+    width: 300px;
+    padding-left: 3rem;
+}
+
+.register-search input::placeholder{
+    padding-left: 1rem;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.register-column p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13.79px;
+    text-align: left;
+    margin-top: -1.5rem;
+}
+
+.user-list{
+    list-style: none;
+    max-width: 300px;
+    margin:20px auto;
+    display: none;
+}
+
+.user-items{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-img{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+
 .image-bottom--right{
     position: absolute;
     right: 0;
-    bottom: -25rem;
+    bottom: -1rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
+}
+
+.register-btn a button{
+    text-decoration: none;
+    background-color:#276221;
+    height: 42px;
+    width: 366px;
+    padding: 8px 24px;
+    gap: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
 }
 
 .image-bottom--right img{
     object-fit: contain;
 }
-
-
-
 /* For tabet phone */
 @media only screen and (max-width:768px){
     body{
@@ -264,25 +304,6 @@ hr{
         .dashboard-sidebar{
             width: 313px;
         }
-        .dashboard-rectangle{
-            /* display: block; */
-            margin-top: 9rem;
-        }
-    
-        .dashboard-rectangle--card{
-            width: 250px;
-            margin-top: 2rem;
-           
-        }
-    
-        .dashboard-activity{
-            width: 510px;
-            height: 100%;
-            margin-bottom: 4rem;
-        }
-        
-    
-    
 }
 
  /* For laptop */
@@ -290,30 +311,8 @@ hr{
     
     body{
         width: 100%;
-    }
-     /* .dashboard-sidebar{
-         width: 313px;
-     } */
-     .dashboard-rectangle{
-         /* display: block; */
-         margin-top: 9rem;
-     }
- 
-     .dashboard-rectangle--card{
-         width: 300px;
-         margin-top: 2rem;
-        
-     }
- 
-     .dashboard-activity{
-         width: 610px;
-         /* height: 100%;
-         margin-bottom: 4rem; */
-     }
-     
+    } 
  }
-
-
  /* For mobile */
 @media only screen and (max-width: 550px) {
    body{
@@ -323,33 +322,5 @@ hr{
    
     .dashboard-sidebar{
         width: 313px;
-    }
-    .dashboard-rectangle{
-        display: block;
-        margin-top: 9rem;
-    }
-
-    .dashboard-rectangle--card{
-        width: 250px;
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .dashboard-rectangle--card p{
-        text-align: center;
-        float: none;
-    }
-
-    .dashboard-activity{
-        width: 220px;
-        height: 100%;
-        text-align: left;
-        margin-bottom: 4rem;
-        
-    }
-
-    .dashboard-activity h1{
-        text-align: center;
-    }
-    
+    } 
 }

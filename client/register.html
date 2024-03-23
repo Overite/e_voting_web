@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Voter</title>
+    <link rel="stylesheet" href="./src/style/register.css">
+</head>
+<body>
+    <header class="dashboard-header flexAlign ">
+        <div class="dashboard-header--menu flexAlign">
+            <img src="./src/assets/icons/menu.svg" class="opensidebar"   alt="">
+            <h3 class="dashboard-header--title">dashboard</h3>
+        </div>
+        <div class="dashboard-header--maskface flexAlign">
+            <select name="connect" id="">
+                <option value="connect">Connected</option>
+            </select>
+            <div class="">
+                <img src="./src/assets/icons/chevron-down.svg" alt="">
+            </div>
+        </div>
+    </header>
+    <aside class="dashboard-sidebar" >
+        <div class="dashboard-sidebar--avatar">
+            <div>
+                <img src="./src/assets/images/Ellipse 1.png" alt="">
+                <h2>Administrator</h2>
+                <p>23054GG</p>
+            </div>
+            <h2 class="closesidebar">&times;</h2>
+        </div>
+        <hr>
+        <ul>
+            <li class="dashboard-sidebar--row flexAlign menu-item">
+                <img src="./src/assets/icons/grid.svg" alt="">
+                <a href="./dashboard.html">Dashboard</a>
+            </li>
+            <li class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(0)">
+                <img src="./src/assets/icons/user.svg" alt="">
+                <a href="./register.html">Register Voter</a>
+            </li>
+            <li class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(1)">
+                <img src="./src/assets/icons/Fingerprint (1).svg" alt="">
+                <a href="">authenticate Voter</a>
+            </li>
+            <li class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(2)">
+                <img src="./src/assets/icons/Wallet.svg" alt="">
+                <a href="./recover.html">Recover Wallet</a>
+            </li>
+            <li class="dashboard-sidebar--row flexAlign menu-item" 
+            <div class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(3)">
+                <img src="./src/assets/icons/log-out.svg" alt="">
+                <a href="">log out</a>
+            </div>
+        </div>
+        <section class="dashboard-sidebar--bottom flexCenter">
+                <img src="./src/assets/images/tetfund.svg" style="height: 20px; width: 100px;" alt="">
+                <img src="./src/assets/images/FUT.png" style="height: 30px; width: 30px;" alt="">
+        </section>
+    </aside>
+    <main class="register-container">
+        <div class="flexColumn">
+            <div class="register-column">
+                <h1>Mode of Registration</h1>
+                <div class="flexAlign">
+                    <div class="flexAlign">
+                        <input type="radio" class="radio">
+                        <p>Manual</p>
+                    </div>
+                    <div class="register-radio">
+                        <input type="radio" class="radio">
+                        <p>Automatic</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="register-btn">
+                <a href="./searchbar.html"> <button>Continue</button> </a>
+             </div>
+        </div>
+
+    </main>
+    <section class="image-bottom--right">
+        <img src="./src/assets/images/tetfund.svg" style="height: 60px; width: 183px;" alt="tetfund logo">
+        <img src="./src/assets/images/FUT.png" style="height: 50px; width: 50px;" alt="">
+    </section>
+</body>
+<script src="./src/javascript/main.js">
+   
+</script>
+</html>
