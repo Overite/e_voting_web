@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Voter</title>
-    <link rel="stylesheet" href="./src/style/register.css">
+    <title>Voting</title>
     <link rel="stylesheet" href="./src/style/header.css">
     <link rel="stylesheet" href="./src/style/sidebar.css">
-    <link rel="stylesheet" href="./src/style/search.css">
-
-
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./src/style/authenicate.css">
 </head>
 <body>
     <header class="header">
         <div class="header-row">
             <img src="./src/assets/icons/menu.svg" class="opensidebar"   alt="">
-            <h3 class="header-row--title">Search</h3>
+            <h3 class="header-row--title">Recover</h3>
         </div>
         <div class="header-row--metamask">
             <select name="connect" id="">
@@ -47,7 +45,7 @@
             </li>
             <li class="sidebar--row flexAlign menu-item" onclick="setActive(1)">
                 <img src="./src/assets/icons/Fingerprint (1).svg" alt="">
-                <a href="">authenticate Voter</a>
+                <a href="./authenticate.html">Voting</a>
             </li>
             <li class="sidebar--row flexAlign menu-item" onclick="setActive(2)">
                 <img src="./src/assets/icons/Wallet.svg" alt="">
@@ -64,25 +62,41 @@
                 <img src="./src/assets/images/FUT.png" style="height: 30px; width: 30px;" alt="">
         </section>
     </aside>
-    <main class="register-container">
-        <div class="flexColumn">
-            <div class="register-column register-search">
-                <div class="flexAlign ">
-                    <img src="./src/assets/icons/search.svg" class="search" alt="search icon">
-                    <input type="search" name="search" id="searchInput" placeholder="Search">
+    <main class="authenticate">
+        <section class="authenicate-row">
+            <form action="">
+                <div class="authenticate-input"> 
+                        <label for="">VID</label>
+                       <input type="text" name="" id=""> 
                 </div>
-                <p>Search with surname of voters identification number</p>
+            </form>
+        </section>
+        <section class="authenticate-row">
+            <div class="authenticate-row--column">
+                <h1>Facial</h1>
+            <div class="authenticate-row--icons">
+                <img src="./src/assets/icons/user.svg" height="72" width="72" alt="user icon">
+                <p>click to proceed</p>
             </div>
-            <ul id="userList" class="user-list">
-            </ul>   
-        </div>
-
+            </div>
+            <div class="authenticate-row--column">
+                <h1>Fingerprint</h1>
+            <div class="authenticate-row--icons">
+                <img src="./src/assets/icons/Fingerprint (1).svg" height="72" width="72" alt="fingerprint icon">
+                <p>click to proceed</p>
+            </div>
+            </div>
+        </section>
+        <div class="btn">
+            <a href=""> <button>Verify</button> </a>
+         </div>
+         <section class="image-bottom--right">
+            <img src="./src/assets/images/tetfund.svg" style="height: 60px; width: 183px;" alt="tetfund logo">
+            <img src="./src/assets/images/FUT.png" style="height: 50px; width: 50px;" alt="">
+        </section>
     </main>
-    <section class="image-bottom--right">
-        <img src="./src/assets/images/tetfund.svg" style="height: 60px; width: 183px;" alt="tetfund logo">
-        <img src="./src/assets/images/FUT.png" style="height: 50px; width: 50px;" alt="">
-    </section>
 </body>
-<script src="./src/javascript/main.js"></script>
-<!-- <script src="./src/javascript/userdetail.js"></script> -->
+<script src="./src/javascript/main.js">
+   
+</script>
 </html>

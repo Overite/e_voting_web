@@ -77,8 +77,39 @@
      text-decoration: none;
  }
 
- .dashboard-sidebar--bottom img{
+ .sidebar--bottom img{
     object-fit: contain;
     text-align: center;
  }
+
+
+ @media only screen and (max-width:768px){
+    body{
+        width: 100%;
+        height: 100%;
+       }
+       
+        .sidebar{
+            width: 313px;
+        }
+}
+
+ /* For laptop */
+@media only screen and (max-width: 1024px) {
+    
+    body{
+        width: 100%;
+    } 
+ }
+ /* For mobile */
+@media only screen and (max-width: 550px) {
+   body{
+    width: 100%;
+    height: 100%;
+   }
+   
+    .sidebar{
+        width: 313px;
+    } 
+}
  

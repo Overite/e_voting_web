@@ -1,7 +1,7 @@
 let openSidebar = document.querySelector('.opensidebar');
 let closeSidebar = document.querySelector('.closesidebar');
-let sidebar = document.querySelector('.dashboard-sidebar');
-let header = document.querySelector('.dashboard-header');
+let sidebar = document.querySelector('.sidebar');
+let header = document.querySelector('.header');
 
 function setActive(index){
   const menuItems = document.getElementsByClassName('menu-item');
@@ -99,15 +99,17 @@ const displayUsers = (filteredUsers) => {
     const userImageLink = document.createElement('a');
     userImageLink.href = `userdetail.html?id=${user.id}`;
     const userImage = document.createElement('img')
+    const userText = document.createElement('p')
     userImage.src = user.image;
     userImage.alt = user.fullName;
     userImage.classList.add('user-img');
     userImageLink.appendChild(userImage)
     listItem.appendChild(userImageLink)
     listItem.appendChild(document.createTextNode(user.fullName))
+    listItem.appendChild(document.createTextNode(user.VotersId))
     userList.appendChild(listItem)
   })
-  userList.style.display = 'block';
+  userList.style.display = 'flex';
 
 }
 
@@ -125,6 +127,9 @@ document.getElementById('searchInput').addEventListener('input',(e)=>{
     displayUsers(filterUsers)
   }
 })
+
+
+
 
 
 // let admin = document.getElementById('admin');

@@ -1,0 +1,116 @@
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 5rem;
+}
+
+.authenticate-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+.authenticate-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.authenticate-input label{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22.98px;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.authenticate-input input{
+    height: 40px;
+    border-radius: 4px;
+    /* max-width: 100%; */
+    width: 940px;
+    padding-left: 1rem;
+    /* margin: 10px auto; */
+    border: 0.5px solid #276221;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.38px;
+    color: #000;
+}
+
+.authenticate-input select{
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 1rem;
+    width: 940px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.38px;
+    color: #000;
+    border: 0.5px solid #276221;
+    background-color: #fff;
+}
+
+.authenticate-row--column{
+    display: flex;
+   flex-direction: column;
+}
+
+.authenticate-row--column h1{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22.98px;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.authenticate-row--icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 186px;
+    width: 366px;
+    border-radius: 4px;
+    border: 0.5px solid #276221;
+}
+
+.authenticate-row--icons p{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 13.79px;
+    text-align: center;
+    color: #0c0908;
+}
+
+.image-bottom--right{
+    position:absolute;
+    bottom: -25rem;
+    right: 0;
+}
+
+@media screen  and  (max-width:768px) {
+    
+    .authenticate-row{
+        flex-direction: column;
+    }
+
+    .authenticate-input input{
+        width: 366px;
+    }
+
+    .authenticate-input select{
+        width: 366px;
+    }
+
+    .image-bottom--right{
+        bottom: -30rem;
+    }
+} 
+    

@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="./src/style/header.css">
     <link rel="stylesheet" href="./src/style/sidebar.css">
     <link rel="stylesheet" href="./src/style/userdetail.css">
+    <link rel="stylesheet" href="./src/style/style.css">
 </head>
-<style>
-
-</style>
 <body>
     <aside class="sidebar" >
         <div class="sidebar--avatar">
             <div>
-                <img src="./src/assets/images/Ellipse 1.png" alt="">
+                <img src="./src/assets/images/Ellipse1.png" alt="">
                 <h2>Administrator</h2>
                 <p>23054GG</p>
             </div>
@@ -53,7 +51,7 @@
     <header class="header">
         <div class="header-row">
             <img src="./src/assets/icons/menu.svg" class="opensidebar"   alt="">
-            <h3 class="header-row--title">dashboard</h3>
+            <h3 class="header-row--title">Voter Detail</h3>
         </div>
         <div class="header-row--metamask">
             <select name="connect" id="">
@@ -67,10 +65,19 @@
     <main>
         <div id="userDetails" class="user-details">
         </div>
-    </main>
-</body>
-</html>
+        <div class="btn">
+            <a href="./searchbar.html"> <button>Next</button> </a>
+         </div>
 
+         <!-- <section class="image-bottom--right">
+            <img src="./src/assets/images/tetfund.svg" style="height: 60px; width: 183px;" alt="tetfund logo">
+            <img src="./src/assets/images/FUT.png" style="height: 50px; width: 50px;" alt="">
+        </section> -->
+    </main>
+   
+</body>
+
+</html>
 <script>
    const getQueryParams = () => {
     const queryString = window.location.search;
@@ -137,14 +144,15 @@ qrcode:'./src/assets/images/qrcode.png'
 ]
 
 const displayUserDetail = (user) => {
-const userDetails = document.getElementById('userDetails')
-userDetails.innerHTML = `<img src="${user.image}" alt="${user.fullName}" class="user-img">`;
-userDetails.innerHTML += `<h3>${user.fullName}</h3>`;
-userDetails.innerHTML += `<p>${user.dateOfBirth}</p>`;
-userDetails.innerHTML += `<p>${user.dateOfReg}</p>`;
-userDetails.innerHTML += `<p>${user.Occupation}</p>`;
-userDetails.innerHTML += `<p>${user.Gender}</p>`;
-userDetails.innerHTML += `<p>${user.address}</p>`;
+    const userDetails = document.getElementById('userDetails')
+    userDetails.innerHTML = `<img src="${user.image}" height="40" width="40" alt="${user.fullName}" class="user-img">`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Full Name:</h2><h3 style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.fullName}</h3></div>`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Voter's Identification Number:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.VotersId}</p></div>`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Date Of Birth:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.dateOfBirth}</p></div>`;
+userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Date Of Registration:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.dateOfReg}</p></div>`;
+userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Occupation:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Occupation}</p></div>`;
+userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Gender:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Gender}</p></div>`;
+userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Address:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.address}</p></div>`;
 userDetails.innerHTML += `<img src="${user.qrcode}" alt="${user.fullName}" class="user-img">`;
 }
 const queryParams = getQueryParams();
@@ -160,3 +168,4 @@ userDetails.innerHTML = `<p>User not found</p>`
 }
 
 </script>
+<script src="./src/javascript/main.js"></script>
