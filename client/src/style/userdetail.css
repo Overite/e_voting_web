@@ -1,0 +1,13 @@
+
+.user-details{
+    max-width: 300px;
+    margin: 5rem auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-img{
+    height: 100px;
+    width: 100px;
+}

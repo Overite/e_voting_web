@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    height: 124px;
+    background-color: #276221 ;
+    padding-left: 2rem;
+    left: 0;
+    /* position: absolute; */
+    width: 100%;
+    transition: 0.3s;
+}
+
+.header-row{
+    margin-right: 2rem;
+    display: flex;
+}
+
+
+.header-row > img{
+    margin-right: 2rem;
+}
+
+.header-row--title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22.98px;
+    color: #FFFEFC;
+    text-transform: capitalize;
+}
+
+.header-row--metamask{
+    background-color:#FFFEFC;
+    width: 72px;
+    height: 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.header-row--metamask > select option{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 9.19px;
+    text-align: center;
+}

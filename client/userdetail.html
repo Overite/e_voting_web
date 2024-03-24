@@ -4,82 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/style/header.css">
+    <link rel="stylesheet" href="./src/style/sidebar.css">
+    <link rel="stylesheet" href="./src/style/userdetail.css">
 </head>
 <style>
 
-.user-details{
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.user-img{
-    height: 100px;
-    width: 100px;
-}
 </style>
 <body>
-    <h1>welcome to user</h1>
-    <div id="userDetails" class="user-details">
-
-    </div>
+    <aside class="sidebar" >
+        <div class="sidebar--avatar">
+            <div>
+                <img src="./src/assets/images/Ellipse 1.png" alt="">
+                <h2>Administrator</h2>
+                <p>23054GG</p>
+            </div>
+            <h2 class="closesidebar">&times;</h2>
+        </div>
+        <hr>
+        <ul>
+            <li class="sidebar--row flexAlign menu-item">
+                <img src="./src/assets/icons/grid.svg" alt="">
+                <a href="./dashboard.html">Dashboard</a>
+            </li>
+            <li class=sidebar--row flexAlign menu-item" onclick="setActive(0)">
+                <img src="./src/assets/icons/user.svg" alt="">
+                <a href="./register.html">Register Voter</a>
+            </li>
+            <li class="sidebar--row flexAlign menu-item" onclick="setActive(1)">
+                <img src="./src/assets/icons/Fingerprint (1).svg" alt="">
+                <a href="">authenticate Voter</a>
+            </li>
+            <li class="sidebar--row flexAlign menu-item" onclick="setActive(2)">
+                <img src="./src/assets/icons/Wallet.svg" alt="">
+                <a href="./recover.html">Recover Wallet</a>
+            </li>
+            <li class="sidebar--row flexAlign menu-item" 
+            <div class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(3)">
+                <img src="./src/assets/icons/log-out.svg" alt="">
+                <a href="">log out</a>
+            </div>
+        </div>
+        <section class="sidebar--bottom flexCenter">
+                <img src="./src/assets/images/tetfund.svg" style="height: 20px; width: 100px;" alt="">
+                <img src="./src/assets/images/FUT.png" style="height: 30px; width: 30px;" alt="">
+        </section>
+    </aside>
+    <header class="header">
+        <div class="header-row">
+            <img src="./src/assets/icons/menu.svg" class="opensidebar"   alt="">
+            <h3 class="header-row--title">dashboard</h3>
+        </div>
+        <div class="header-row--metamask">
+            <select name="connect" id="">
+                <option value="connect">Connected</option>
+            </select>
+            <div class="">
+                <img src="./src/assets/icons/chevron-down.svg" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="userDetails" class="user-details">
+        </div>
+    </main>
 </body>
 </html>
-<script>
-    const getQueryParams = () => {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString)
-        return Object.fromEntries(urlParams.entries())
-    }
 
-    const users = [
-    { id:1,
-    name:"Victor Oricha",
-    image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
-  },
-  { id:2,
-    name:"frank markus",
-    image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
-  },
-  { id:3,
-    name:"John peace",
-    image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
-  },
-  { id:4,
-    name:"dave frank",
-    image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
-  },
-  {
-    id:5,
-    name:"Omele bucki",
-    image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
-  },
+<script>
+   const getQueryParams = () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    return Object.fromEntries(urlParams.entries())
+}
+
+const users = [
+{ id:1,
+fullName:"Victor Oricha",
+VotersId:845281385,
+dateOfBirth:'02-11-1975',
+dateOfReg:'12-03-1975',
+Occupation:'Trading',
+Gender:'Female',
+address:'10, mukaila street,sango, ota,ogun state',
+image:'./src/assets/images/Ellipse1.png',
+qrcode:'./src/assets/images/qrcode.png'
+},
+{ id:2,
+fullName:"Frank Oricha",
+VotersId:234423423,
+dateOfBirth:'02-11-1975',
+dateOfReg:'12-03-1975',
+Occupation:'fashion designer',
+Gender:'male',
+address:'10, mukaila street,sango, ota,ogun state',
+image:'./src/assets/images/Ellipse1.png',
+qrcode:'./src/assets/images/qrcode.png'
+},
+{ id:3,
+fullName:"markus boniface",
+VotersId:845281385,
+dateOfBirth:'02-11-1975',
+dateOfReg:'12-03-1975',
+Occupation:'barber',
+Gender:'male',
+address:'10, mukaila street,sango, ota,ogun state',
+image:'./src/assets/images/Ellipse1.png',
+qrcode:'./src/assets/images/qrcode.png'
+},
+{ id:4,
+fullName:"faith omelete",
+VotersId:845281385,
+dateOfBirth:'02-11-1975',
+dateOfReg:'12-03-1975',
+Occupation:'sewer',
+Gender:'Female',
+address:'10, mukaila street,sango, ota,ogun state',
+image:'./src/assets/images/Ellipse1.png',
+qrcode:'./src/assets/images/qrcode.png'
+},
+{ id:5,
+fullName:"Loveth faith",
+VotersId:845281385,
+dateOfBirth:'02-11-1975',
+dateOfReg:'12-03-1975',
+Occupation:'teacher',
+Gender:'Female',
+address:'10, mukaila street,sango, ota,ogun state',
+image:'./src/assets/images/Ellipse1.png',
+qrcode:'./src/assets/images/qrcode.png'
+},
 ]
 
 const displayUserDetail = (user) => {
-    const userDetails = document.getElementById('userDetails')
-    userDetails.innerHTML = `<img src="${user.image}" alt="${user.name}" class="user-img">`;
-  userDetails.innerHTML += `<h3>${user.name}</h3>`;
-  userDetails.innerHTML += `<p>${user.detail}</p>`;
-
+const userDetails = document.getElementById('userDetails')
+userDetails.innerHTML = `<img src="${user.image}" alt="${user.fullName}" class="user-img">`;
+userDetails.innerHTML += `<h3>${user.fullName}</h3>`;
+userDetails.innerHTML += `<p>${user.dateOfBirth}</p>`;
+userDetails.innerHTML += `<p>${user.dateOfReg}</p>`;
+userDetails.innerHTML += `<p>${user.Occupation}</p>`;
+userDetails.innerHTML += `<p>${user.Gender}</p>`;
+userDetails.innerHTML += `<p>${user.address}</p>`;
+userDetails.innerHTML += `<img src="${user.qrcode}" alt="${user.fullName}" class="user-img">`;
 }
-  const queryParams = getQueryParams();
-  const userId = queryParams.id;
+const queryParams = getQueryParams();
+const userId = queryParams.id;
 
-  const user = users.find(user =>  user.id === userId)
+const user = users.find(user =>  user.id == userId)
 
-  if (user){
-    displayUserDetail(user)
-  } else{
-    const userDetails = document.getElementById('userDetails');
-    userDetails.innerHTML = `<p>User not found</p>`
-  }
+if (user){
+displayUserDetail(user)
+} else{
+const userDetails = document.getElementById('userDetails');
+userDetails.innerHTML = `<p>User not found</p>`
+}
 
 </script>

@@ -28,35 +28,64 @@ closeSidebar.addEventListener('click',()=>{
 
 const users = [
   { id:1,
-    name:"Victor Oricha",
+    fullName:"Victor Oricha",
+    VotersId:845281385,
+    dateOfBirth:'02-11-1975',
+    dateOfReg:'12-03-1975',
+    Occupation:'Trading',
+    Gender:'Female',
+    address:'10, mukaila street,sango, ota,ogun state',
     image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
+    qrcode:'./src/assets/images/qrcode.png'
   },
   { id:2,
-    name:"frank markus",
+    fullName:"Frank Oricha",
+    VotersId:234423423,
+    dateOfBirth:'02-11-1975',
+    dateOfReg:'12-03-1975',
+    Occupation:'fashion designer',
+    Gender:'male',
+    address:'10, mukaila street,sango, ota,ogun state',
     image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
+    qrcode:'./src/assets/images/qrcode.png'
   },
   { id:3,
-    name:"John peace",
+    fullName:"markus boniface",
+    VotersId:845281385,
+    dateOfBirth:'02-11-1975',
+    dateOfReg:'12-03-1975',
+    Occupation:'barber',
+    Gender:'male',
+    address:'10, mukaila street,sango, ota,ogun state',
     image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
+    qrcode:'./src/assets/images/qrcode.png'
   },
   { id:4,
-    name:"dave frank",
+    fullName:"faith omelete",
+    VotersId:845281385,
+    dateOfBirth:'02-11-1975',
+    dateOfReg:'12-03-1975',
+    Occupation:'sewer',
+    Gender:'Female',
+    address:'10, mukaila street,sango, ota,ogun state',
     image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
+    qrcode:'./src/assets/images/qrcode.png'
   },
-  {
-    id:5,
-    name:"Omele bucki",
+  { id:5,
+    fullName:"Loveth faith",
+    VotersId:845281385,
+    dateOfBirth:'02-11-1975',
+    dateOfReg:'12-03-1975',
+    Occupation:'teacher',
+    Gender:'Female',
+    address:'10, mukaila street,sango, ota,ogun state',
     image:'./src/assets/images/Ellipse1.png',
-    detail:'looresdfasdfjasfjsafjaslfj'
+    qrcode:'./src/assets/images/qrcode.png'
   },
 ]
 const filteredUsers = (query) =>{
   return users.filter(user => 
-    user.name.toLowerCase().includes(query.toLowerCase())
+    user.fullName.toLowerCase().includes(query.toLowerCase())
   )
 }
 
@@ -71,11 +100,11 @@ const displayUsers = (filteredUsers) => {
     userImageLink.href = `userdetail.html?id=${user.id}`;
     const userImage = document.createElement('img')
     userImage.src = user.image;
-    userImage.alt = user.name;
+    userImage.alt = user.fullName;
     userImage.classList.add('user-img');
     userImageLink.appendChild(userImage)
     listItem.appendChild(userImageLink)
-    listItem.appendChild(document.createTextNode(user.name))
+    listItem.appendChild(document.createTextNode(user.fullName))
     userList.appendChild(listItem)
   })
   userList.style.display = 'block';
