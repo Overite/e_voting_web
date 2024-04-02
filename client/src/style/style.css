@@ -50,18 +50,6 @@ body{
 }
 
 
-.btn  a button{
-    text-decoration: none;
-    background-color:#276221;
-    height: 42px;
-    width: 366px;
-    padding: 8px 24px;
-    gap: 10px;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-}
-
 
 .image-bottom--right{
     position: absolute;
@@ -75,4 +63,13 @@ body{
 
 .image-bottom--right img{
     object-fit: contain;
+}
+
+
+
+@media only screen and (max-width:768px){
+    /* .image-bottom--right img{
+        height: 150px;
+        width: 50;
+    } */
 }

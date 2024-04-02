@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-voting website</title>
     <link rel="stylesheet" href="./src/style/login.css">
+    <link rel="stylesheet" href="./src/style/style.css">
 </head>
 <body>
     <main class="e-voting-container">
@@ -22,15 +23,17 @@
                     <h1 class="login--title">Login</h1>
                     <div>
                         <div class="group--control">
+
                             <div class="error-group--control">
+                                <div class="errorInput"  id="errorInput"></div>
+                                <div class="markInput"  id="markInput"></div>
                                 <input type="text" name="admin" placeholder="Admin" id="admin">
-                                <div  id="errorInput"></div>
+                              
                             </div>
                         </div>
                         <div class="group--control">
                             <div class="error-group--control">
                                 <input type="password" name="password" placeholder="password" id="password">
-                                <div  id="errorInput"></div>
                             </div>
                             <img class="eye-slash" id="togglePassword" src="./src/assets/icons/eye-slash.svg" alt="eye slash">
                         </div>
@@ -39,8 +42,7 @@
                             <p class="">Remember me</p>
                         </div>
                         <div class="btn">
-                           
-                                <a href="./dashboard.html"> <button type="submit"> Login</button> </a>
+                            <button type="submit"> Login</button>
                     </div>
                     </div>
                 </form>

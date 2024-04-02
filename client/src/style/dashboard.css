@@ -178,68 +178,6 @@ body{
     cursor: pointer;
 }
 
-.dashboard-sidebar--avatar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1rem;
-    padding-left: 1rem;
-    height: 124px;
-}
-
-.dashboard-sidebar--avatar img{
-    height: 51px;
-    width: 51px;
-    border: 0.4px;
-    object-fit: contain;
-}
-
-.dashboard-sidebar--avatar h2{
-    font-size: 10px;
-    line-height: 11.49px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.dashboard-sidebar--avatar p{
-    font-size: 8px;
-    line-height: 10.24px;
-    text-align: center;
-    font-weight: 400;
-}
-
-hr{
-    border: 1px solid #276221;
-}
-
-.dashboard-sidebar--row{
-    color: #000;
-    margin: 3rem 1rem;
-}
-
-.dashboard-sidebar--row img{
-    height: 20px;
-    width: 20px;
-    object-fit: contain;
-    padding-right:10px ;
-    padding-left: 10px;
-}
-
-.dashboard-sidebar--row a{
-    text-decoration: none;
-}
-
-.active {
-    border-bottom-right-radius: 32px;
-    background-color: #276221;
-    color: #FFFEFC;
-}
-
-.dashboard-sidebar--bottom img{
-    object-fit: contain;
-    text-align: center;
-}
-
 .image-bottom--right{
     position: absolute;
     right: 0;
@@ -260,17 +198,13 @@ hr{
         width: 100%;
         height: 100%;
        }
-       
-        .dashboard-sidebar{
-            width: 313px;
-        }
         .dashboard-rectangle{
             /* display: block; */
             margin-top: 9rem;
         }
     
         .dashboard-rectangle--card{
-            width: 366px;
+            width: 426px;
             margin-top: 2rem;
            
         }
@@ -300,7 +234,7 @@ hr{
      }
  
      .dashboard-rectangle--card{
-         width: 366px;
+         width: 300px;
          margin-top: 2rem;
         
      }
@@ -321,9 +255,6 @@ hr{
     height: 100%;
    }
    
-    .dashboard-sidebar{
-        width: 313px;
-    }
     .dashboard-rectangle{
         display: block;
         margin-top: 9rem;

@@ -40,6 +40,7 @@
      width: 51px;
      border: 0.4px;
      object-fit: contain;
+     color: #000;
  }
  
  .sidebar--avatar h2{
@@ -60,9 +61,14 @@
      border: 1px solid #276221;
  }
  
+ ul{
+    list-style: none;
+ }
  .sidebar--row{
      color: #000;
      margin: 3rem 1rem;
+     display: flex;
+     align-items: center;
  }
  
  .sidebar--row img{
@@ -82,6 +88,20 @@
     text-align: center;
  }
 
+ .active{
+    border-bottom-right-radius: 32px;
+    background-color: #276221;
+    color: #FFFEFC;
+    width: 366px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+ }
+
+ .image{
+    color: #fff;
+    font-size: 40px;
+ }
 
  @media only screen and (max-width:768px){
     body{

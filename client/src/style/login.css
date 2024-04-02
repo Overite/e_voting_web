@@ -118,14 +118,34 @@ body{
 }
 
 .errorInput{
-    color: red;
+    color: #fff;
+    text-align:left;
+    width: 100%;
+    padding: 8px 24px;
+    background-color: red;
+    display: none;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
+.markInput{
+    color: #fff;
+    text-align:left;
+    width: 100%;
+    padding: 8px 24px;
+    background-color: green;
+    display: none;
+    border-radius: 4px;
+    font-weight: bold; 
+}
 .error-group--control{
    display: flex;
    flex-direction: column;
 }
-.e-voting--btn  a button{
+
+
+
+.btn button{
     text-decoration: none;
     background-color:#276221;
     height: 42px;
@@ -156,3 +176,4 @@ body{
 @media screen and (max-width: 550px) {
    
  }
+

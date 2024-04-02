@@ -13,40 +13,41 @@
     <aside class="sidebar" >
         <div class="sidebar--avatar">
             <div>
-                <img src="./src/assets/images/Ellipse1.png" alt="">
+                <img src="./src/assets/images/Ellipse1.png" alt="avatar">
                 <h2>Administrator</h2>
                 <p>23054GG</p>
             </div>
             <h2 class="closesidebar">&times;</h2>
         </div>
         <hr>
-        <ul>
-            <li class="sidebar--row flexAlign menu-item">
-                <img src="./src/assets/icons/grid.svg" alt="">
-                <a href="./dashboard.html">Dashboard</a>
-            </li>
-            <li class=sidebar--row flexAlign menu-item" onclick="setActive(0)">
-                <img src="./src/assets/icons/user.svg" alt="">
-                <a href="./register.html">Register Voter</a>
-            </li>
-            <li class="sidebar--row flexAlign menu-item" onclick="setActive(1)">
-                <img src="./src/assets/icons/Fingerprint (1).svg" alt="">
-                <a href="">authenticate Voter</a>
-            </li>
-            <li class="sidebar--row flexAlign menu-item" onclick="setActive(2)">
-                <img src="./src/assets/icons/Wallet.svg" alt="">
-                <a href="./recover.html">Recover Wallet</a>
-            </li>
-            <li class="sidebar--row flexAlign menu-item" 
-            <div class="dashboard-sidebar--row flexAlign menu-item" onclick="setActive(3)">
-                <img src="./src/assets/icons/log-out.svg" alt="">
-                <a href="">log out</a>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li class="sidebar--row flexAlign">
+                    <a href="./dashboard.html"><img src="./src/assets/icons/grid.svg" alt="grid icon">Dashboard</a>
+                </li>
+                <li class="sidebar--row flexAlign">
+                    <a href="./register.html"><img src="./src/assets/icons/user.svg" alt="voter icon">Register Voter</a>
+                </li>
+                <li class="sidebar--row flexAlign">
+                    <a href="./authenticate.html"><img src="./src/assets/icons/Fingerprint (1).svg" alt="menu icon">Voting</a>
+                </li>
+                <!-- <li class="sidebar--row flexAlign menu-item">
+                    <img src="./src/assets/icons/Fingerprint (1).svg" alt="">
+                    <a href="./biodata.html">Voting</a>
+                </li> -->
+                <li class="sidebar--row flexAlign">
+                    <a href="./wallet.html"> <img src="./src/assets/icons/Wallet.svg" alt="wallet icon">Recover Wallet</a>
+                </li>
+                <li class="sidebar--row flexAlign"> 
+                    <a><img src="./src/assets/icons/log-out.svg" alt="logout icon">log out</a>
+                </li>
+        </ul>
+        </nav>
         <section class="sidebar--bottom flexCenter">
                 <img src="./src/assets/images/tetfund.svg" style="height: 20px; width: 100px;" alt="">
                 <img src="./src/assets/images/FUT.png" style="height: 30px; width: 30px;" alt="">
         </section>
+        
     </aside>
     <header class="header">
         <div class="header-row">
@@ -149,11 +150,11 @@ const displayUserDetail = (user) => {
     userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Full Name:</h2><h3 style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.fullName}</h3></div>`;
     userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Voter's Identification Number:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.VotersId}</p></div>`;
     userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Date Of Birth:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.dateOfBirth}</p></div>`;
-userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Date Of Registration:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.dateOfReg}</p></div>`;
-userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Occupation:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Occupation}</p></div>`;
-userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Gender:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Gender}</p></div>`;
-userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Address:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.address}</p></div>`;
-userDetails.innerHTML += `<img src="${user.qrcode}" alt="${user.fullName}" class="user-img">`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Date Of Registration:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.dateOfReg}</p></div>`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Occupation:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Occupation}</p></div>`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Gender:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.Gender}</p></div>`;
+    userDetails.innerHTML += `<div style="display:flex;flex-direction:column"><h2 style="font-size:16px;font-weight:700;line-height:18.38px;">Address:</h2><p style="font-size:16px;font-weight:400;line-height:18.38px;color:#0C0908;">${user.address}</p></div>`;
+    userDetails.innerHTML += `<img src="${user.qrcode}" alt="${user.fullName}" class="user-img">`;
 }
 const queryParams = getQueryParams();
 const userId = queryParams.id;
